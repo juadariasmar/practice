@@ -1,0 +1,304 @@
+:root {
+  --blanco: #ffffff;
+  --oscuro: rgb(10, 11, 13);
+  --primario: rgba(49, 28, 28, 0.253);
+  --grisClaro: #dfe9f3;
+
+  font-family: 'Poppins', sans-serif;s
+}
+/*globales*/
+html {
+  font-size: 62.5%; /*seleccionamos todo el 
+    documento para reiniciar el tamano total 
+    del documento*/
+  box-sizing: border-box; /*hack para box model*/
+  /*scroll-snap-type: y proximity;*/
+}
+/* scroll snap */
+/*.servicios,
+.navegacionPrincipal,
+.formulario,
+.footer {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /*hack para box model*/
+}
+body {
+  font-size: 16px; /*1 rem= 10px */
+  background-image: linear-gradient(
+    to top,
+    var(--grisClaro) 0%,
+    var(--blanco)
+  ); /* fondo desvanecido*/
+}
+.contenedor {
+  max-width: 120rem; /* le aplico un ancho*/
+  margin: 0 auto; /* aplico un margin top: 0;
+  margin right: auto; margin bottom: 0; margin 
+  left: auto;*/
+}
+.boton {
+  background-color: var(--primario); /* color fondo  */
+  color: var(--oscuro); /* color fuente **/
+  padding: 1rem 3rem; /* separacion interior**/
+  margin-top: 1rem; /*margen superior*/
+  font-size: 2rem; /* tamano fuente*/
+  text-decoration: none; /* quitar subrayado*/
+  text-transform: uppercase; /* mayusculas*/
+  font-weight: bold; /* negrita*/
+  border-radius: 0.5rem; /* redondear bordes*/
+  width: 90%; /* ajuste responsivo*/
+  text-align: center; /*alineacion responsiva*/
+  border: none;
+}
+@media (min-width: 480px) {
+  /*tamano en resolucion 480px*/
+  .boton {
+    width: auto;
+  }
+}
+.boton:hover {
+  cursor: pointer;
+}
+.sombra {
+  /*clase de main*/
+  padding: 2rem; /* separacion interior*/
+  background-color: var(--blanco); /* color fondo*/
+  border-radius: 1rem; /* redondear bordes*/
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  /* sombra bordes*/
+}
+.img {
+  width: 37rem;
+  height: 11rem;
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  background-color: var(--oscuro);
+}
+.titulo__logo {
+  margin: 3 rem 0;
+}
+@media (min-width: 250px) {
+  .titulo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 480px) {
+  .titulo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+h2 {
+  font-size: 2.8rem; /*tamano*/
+}
+h3 {
+  font-size: 1.8rem; /*tamano*/
+}
+
+h1,
+h2,
+h3 {
+  text-align: center; /* alineacion titulos*/
+}
+/* utilidades */
+.w-sm-100 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .w-sm-100 {
+    width: auto;
+  }
+}
+.flex {
+  display: flex;
+}
+.alinear-derecha {
+  justify-content: flex-end;
+}
+/*navegacion principal*/
+.nav-bg {
+  background-color: var(--primario); /*color fondo nav-bg*/
+}
+.navegacionPrincipal {
+  /*bloque*/
+  display: flex; /* habitacion flex box*/
+  flex-direction: column; /*direccion en columnas del flex*/
+}
+@media (min-width: 480px) {
+  /*alineacion usando resolucion 480px*/
+  .navegacionPrincipal {
+    flex-direction: column; /*direccion en columnas del flex*/
+    align-items: center; /*alineacion items centro*/
+  }
+}
+@media (min-width: 768px) {
+  /*declaracion 
+  Media Querie sensibilidad a la resolucion*/
+  .navegacionPrincipal {
+    flex-direction: row; /*alineacion in line*/
+    justify-content: space-between; /* justificacion entre espacios*/
+  }
+}
+.navegacionPrincipal a {
+  /* enlaces*/
+  display: block; /*declaracion del display*/
+  text-align: center; /* alineacion de texto al centro*/
+  color: var(--oscuro); /*color de texto */
+  font-weight: bold; /*negrita*/
+  text-decoration: none; /*no subrayado*/
+  font-size: 2rem; /*tamano fuente*/
+  padding: 2rem; /*separacion interior*/
+  text-transform: uppercase;
+}
+.navegacionPrincipal a:hover {
+  /*pseudo-clase :hover de CSS coincide cuando el usuario interactua con un elemento con un dispositivo senalador, pero no necesariamente lo activa. Generalmente se activa cuando el ususario se desplaza sobre un elemento con el cursor (puntero del mouse) */
+  background-color: var(
+    --oscuro
+  ); /*color del fondo cuando esta siendo senalado por el cursor*/
+  color: var(--blanco); /*color fuente al ser senalado*/
+}
+/*hero */
+.hero {
+  /*clase del section*/
+  height: 450px; /*height: 450px; /*tamano declarado para este elemento*/
+  background-image: url(../Img/fondo.jpg); /*importacion imagen*/
+  margin-bottom: 2rem; /*margen inferior*/
+  position: relative; /*declaracion de posicion relativa*/
+  background-repeat: no-repeat; /*elemento no repetible*/
+  background-size: cover; /*adaptacion al tamano disponible*/
+}
+.contenido-hero {
+  position: absolute; /*posicion del efecto de sombra de la imagen*/
+  background-color: rgb(
+    0 0 0 /60%
+  ); /*color negro de fondo con una transparencia del 60%*/
+  width: 100%; /*ancho*/
+  height: 100%; /*altura*/
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*alineacion verticalmente de los elementos*/
+}
+.contenido-hero h2,
+.contenido-hero p {
+  color: var(--blanco);
+  font-weight: bold; /*propiedades compartidas*/
+}
+.contenido-hero .ubicacion {
+  display: flex; /*alineacion horizontal*/
+  align-items: flex-end;
+}
+
+/*servicios */
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicio h3 {
+  color: var(--oscuro);
+  font-weight: bold;
+}
+.servicio__servicios h3 {
+  font-size: 3.5rem;
+}
+.servicio p {
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: justify;
+  font-size: 1.7rem;
+  padding: 2rem;
+}
+.servicio__servicios p {
+  line-height: 1.5;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.servicio__principios {
+  text-align: justify;
+}
+.servicio .iconos {
+  height: 7rem;
+  width: 7rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Contacto */
+.formulario {
+  background-color: var(--oscuro);
+  width: min(60rem, 100%); /* utilizar el valor mas pequeno*/
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center; /* alineo el texto*/
+  font-size: 1.8rem; /* le doy el tamano equivalente a 18px*/
+  text-transform: uppercase; /* mayusculas*/
+  font-weight: bold; /* negrita */
+  margin-bottom: 2rem; /* margen inferior de 20px*/
+  color: var(--primario); /*color fuente*/
+}
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
+.campo:nth-child(3),
+.campo:nth-child(4) {
+  grid-column: 1 / 3;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.campo textarea {
+  height: 20rem;
+}
+/*footer*/
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}

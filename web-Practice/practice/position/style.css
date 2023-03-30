@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  width: 100vh;
+  height: 100vh;
+  background-color: grey;
+}
+
+.main__container {
+  width: 35%;
+  height: 10%;
+  background-color: red;
+  margin: 0 auto;
+  border-radius: 3rem;
+  border: 0.5rem black solid;
+  position: relative;
+  top: 13rem;
+}
+
+.main__container__h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 2.5rem;
+}
+.parent {
+  width: 60%;
+  min-height: 20rem;
+  padding: 8rem 5rem;
+  background-color: lightgrey;
+  margin: 10rem auto;
+  font-size: 2rem;
+  border-radius: 3rem;
+  border: 1px black solid;
+}
+.parent__p {
+  text-align: justify;
+}
