@@ -48,8 +48,8 @@ if (figura === "triángulo") {
   let h = parseFloat(prompt("Ingresa la longitud de la altura h:"));
 
 
-  let perimetro = calcularPerimetroTriangulo(a, b, c);
-  let area = calcularAreaTriangulo(b, h);
+  let perimetroTriangulo = calcularPerimetroTriangulo(a, b, c);
+  let areaTriangulo = calcularAreaTriangulo(b, h);
 
   console.log("El perímetro del triángulo es: " + perimetro);
   console.log("El área del triángulo es: " + area);
@@ -57,24 +57,24 @@ if (figura === "triángulo") {
   let base = parseFloat(prompt("Ingresa la longitud de la base:"));
   let altura = parseFloat(prompt("Ingresa la altura:"));
 
-  let perimetro = calcularPerimetroRectangulo(base, altura);
-  let area = calcularAreaRectangulo(base, altura);
+  let perimetroRectangulo = calcularPerimetroRectangulo(base, altura);
+  let areaRectangulo = calcularAreaRectangulo(base, altura);
 
   console.log("El perímetro del rectángulo es: " + perimetro);
   console.log("El área del rectángulo es: " + area);
 } else if (figura === "cuadrado") {
   let lado = parseFloat(prompt("Ingresa la longitud del lado:"));
 
-  let perimetro = calcularPerimetroCuadrado(lado);
-  let area = calcularAreaCuadrado(lado);
+  let perimetroCuadrado = calcularPerimetroCuadrado(lado);
+  let areaCuadrado = calcularAreaCuadrado(lado);
 
   console.log("El perímetro del cuadrado es: " + perimetro);
   console.log("El área del cuadrado es: " + area);
 } else if (figura === "circunferencia") {
   let radio = parseFloat(prompt("Ingresa la longitud del radio:"));
 
-  let perimetro = calcularPerimetroCircunferencia(radio);
-  let area = calcularAreaCircunferencia(radio);
+  let perimetroCircunferencia = calcularPerimetroCircunferencia(radio);
+  let areaCircunferencia = calcularAreaCircunferencia(radio);
 
   console.log("El perímetro de la circunferencia es: " + perimetro);
   console.log("El área de la circunferencia es: " + area);
