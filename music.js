@@ -33,6 +33,16 @@ function agregarPersona() {
   let ciudadOrigen = prompt("Ingrese la ciudad de origen:");
 
   let persona = new Persona(nombre, identificacion, fechaNacimiento, correo, ciudadResidencia, ciudadOrigen);
+  // Agregar canciones favoritas
+  let agregarCanciones = prompt("¿Desea agregar canciones favoritas? (s/n)").toLowerCase();
+  while (agregarCanciones === "s") {
+    let artista = prompt("Ingrese el artista de la canción favorita:");
+    let titulo = prompt("Ingrese el título de la canción favorita:");
+    persona.agregarCancionFavorita(artista, titulo);
+
+    agregarCanciones = prompt("¿Desea agregar otra canción favorita? (s/n)").toLowerCase();
+  }
+
   personas.push(persona);
 
   console.log("Persona agregada exitosamente.");
