@@ -45,9 +45,9 @@ if (!validarOrden(vector1) || !validarOrden(vector2)) {
 
 // Función para realizar la mezcla ordenada de dos vectores
 function mezclarVectores(vector1, vector2) {
-  var mezcla = [];
-  var i = 0;
-  var j = 0;
+  let mezcla = [];
+  let i = 0;
+  let j = 0;
 
   while (i < vector1.length && j < vector2.length) {
     if (vector1[i] < vector2[j]) {
