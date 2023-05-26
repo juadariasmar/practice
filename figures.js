@@ -4,8 +4,8 @@ function calcularPerimetroTriangulo(a, b, c) {
 }
 
 // Función para calcular el área de un triángulo
-function calcularAreaTriangulo(base, altura) {
-  return (base * altura) / 2;
+function calcularAreaTriangulo(b, h) {
+  return (b * h) / 2;
 }
 
 // Función para calcular el perímetro de un rectángulo
